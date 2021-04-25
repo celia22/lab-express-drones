@@ -17,15 +17,14 @@ router.get('/drones', (req, res, next) => {
     });
 });
 
-router.get("/drones/create", (req, res, next) => res.render('drones/create-form'));
 
-router.post("/drones/create", (req, res, next) => {
-  const { name, propellers, speed } = req.body;
-  console.log(req.body);
+router.get('/drones/create', (req, res, next) => res.render('drones/create-form'));
 
-  Drone.create({ name, propellers, speed })
-    .then(droneFromDB => console.log(`New drone created: ${droneFromDB.name}.`))
-    .catch(error => console.log(`Error while creating a new drone:`, error));
+router.post('/drones/create', (req, res, next) => {
+  const {name, propellers, maxSpeed} = req.body;
+  Drone.create({name, propellers, maxSpeed})
+    .then(()=> res.redirect('/drones'))
+    .catch(()=> res.render('drones/create-form'))
 });
 
 router.get('/drones/:id/edit', (req, res, next) => {
