@@ -7,16 +7,18 @@
     <ul>
       <h3> Drone name: {{this.name}}</h3>
       <h3> Number of propellers: {{this.propellers}}</h3>
-      <h3> MaxSpeed: {{this.speed}}</h3>
-      <a href="/drones/{{this.id}}/edit">Edit drone</a>
-      <form action="/drones/{{this.id}}/delete" method="POST">
-        <button type="submit" style="cursor: pointer;">Delete</button>
-      </form>
+      <h3> MaxSpeed: {{this.maxSpeed}}</h3>
+      <div class="drones_card_container_buttons">
+        <a class="btn" href="/drones/{{this.id}}/edit">Edit drone</a>
+        <form action="/drones/{{this.id}}/delete" method="POST">
+          <button class="btn" type="submit" style="cursor: pointer;">Delete</button>
+        </form>
+      </div>
       <br>
     </ul>
     {{/each}}
   </div>
 
-
+  <a href="/">Back</a>
 
 </div>

@@ -1,8 +1,81 @@
 body {
-  padding: 50px;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background-image: url(../images/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.index_container {
+  position: absolute;
+  left: 10%;
+  top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 650px;
+  background-color: rgba(43, 41, 41, 0.6);
+  color: whitesmoke;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.index_container > p {
+  font-size: 2.5rem;
+}
+
+.links_to {
+  margin-top: 50px;
 }
 
 a {
-  color: #00b7ff;
+  color: #6bd2fb;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.drones_view_container {
+  color: white;
+  background-color: rgba(43, 41, 41, 0.8);
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drones_card_container {
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  margin: 50px 25px;
+  background-color: rgba(254, 254, 254, 0.8);
+}
+
+.drones_card_container > h2 {
+  margin-right: 50px;
+}
+
+.drones_card_container label {
+  margin-left: 30px;
+}
+
+.btn {
+  padding: 3px;
+  background-color: black;
+  color: white;
+  font-weight: 900;
+  font-size: 12px;
+  margin: 10px;
+}
+
+.drones_card_container_buttons {
+  display: flex;
 }
