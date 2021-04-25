@@ -8,9 +8,15 @@
       <h3> Drone name: {{this.name}}</h3>
       <h3> Number of propellers: {{this.propellers}}</h3>
       <h3> MaxSpeed: {{this.speed}}</h3>
+      <a href="/drones/{{this.id}}/edit">Edit drone</a>
+      <form action="/drones/{{this.id}}/delete" method="POST">
+        <button type="submit" style="cursor: pointer;">Delete</button>
+      </form>
       <br>
     </ul>
     {{/each}}
   </div>
+
+
 
 </div>
